@@ -4,7 +4,9 @@ public class Tower : MonoBehaviour
 {
     [SerializeField] TowerData data;
     [SerializeField] Transform muzzle;
+    [SerializeField] Transform head;         // parte que rota 
     [SerializeField] LayerMask enemyMask;
+    [SerializeField] float turnSpeed = 720f;
 
     readonly Collider[] hits = new Collider[32];
     Transform target;
@@ -12,40 +14,41 @@ public class Tower : MonoBehaviour
 
     void Update()
     {
-        if (Time.time >= nextScan) { 
-            nextScan = Time.time + 0.15f;
-            target = Acquire();
-        }
+        if (Time.time >= nextScan) { nextScan = Time.time + 0.15f; target = Acquire(); }
         if (!target) return;
 
-        var dir = target.position - transform.position;
-        dir.y = 0;
-
-        if (Time.time >= nextFire)
+        var dir = target.position - transform.position; dir.y = 0;
+        if (dir.sqrMagnitude > 0.001f)
         {
-            nextFire = Time.time + data.fireInterval;
-            Fire();
+            var rotTarget = head ? head : transform;
+            rotTarget.rotation = Quaternion.RotateTowards(rotTarget.rotation,
+                Quaternion.LookRotation(dir), turnSpeed * Time.deltaTime);
         }
 
+        if (Time.time >= nextFire) { nextFire = Time.time + data.fireInterval; Fire(); }
     }
 
     Transform Acquire()
+    {
+        int n = Physics.OverlapSphereNonAlloc(transform.position, data.range, hits, enemyMask);
+        Transform best = null; float bestScore = float.MaxValue;
+        for (int i = 0; i < n; i++)
         {
-            int n = Physics.OverlapSphereNonAlloc(transform.position, data.range, hits, enemyMask);
-            Transform best = null; float bestScore = float.MaxValue;
-            for (int i = 0; i < n; i++)
+            float score = (hits[i].transform.position - transform.position).sqrMagnitude;
+            if (data.targetMode == TargetMode.First)
             {
-                float score = (hits[i].transform.position - transform.position).sqrMagnitude;
-                // TargetMode.First: usar progreso en el camino (ver nota)
-                if (score < bestScore) { bestScore = score; best = hits[i].transform; }
+                var pp = hits[i].GetComponentInParent<IPathProgress>();
+                if (pp != null) score = -pp.Progress;      // menor score = mejor
             }
-            return best;
+            if (score < bestScore) { bestScore = score; best = hits[i].transform; }
         }
-        
+        return best;
+    }
+
     void Fire()
     {
         var p = Instantiate(data.projectilePrefab, muzzle.position, muzzle.rotation);
-        p.Init(target, data.damage, data.projectileSpeed);
+        p.Init(target, data, enemyMask);
     }
 
     void OnDrawGizmosSelected()
