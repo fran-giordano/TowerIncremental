@@ -16,6 +16,6 @@ MonoBehaviour:
   speed: 3
   maxHealth: 50
   damageToBase: 1
-  reward: 5
+  reward: 10
   scale: 0.7
   color: {r: 1, g: 1, b: 1, a: 1}

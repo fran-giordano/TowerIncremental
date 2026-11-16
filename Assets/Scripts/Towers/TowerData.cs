@@ -14,6 +14,8 @@ public class TowerData : ScriptableObject
     public Projectile projectilePrefab;
     public TargetMode targetMode;
 
+    public int cost = 50;
+
     [Header ("Efecto")]
     public EffectType effect;
     public float effectValue = 0.5f;    //slow: x vel

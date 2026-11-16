@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f8ac7ee238b89468064e70161b896b, type: 3}
   m_Name: Explosive
   m_EditorClassIdentifier: 
-  towerName: 
+  towerName: Explosive
   range: 6
   damage: 20
   fireInterval: 2
@@ -20,6 +20,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 6901598754011571859, guid: 58d28daf8c7f7274ea4a07bccbab5257,
     type: 3}
   targetMode: 0
+  cost: 120
   effect: 2
   effectValue: 0.5
   effectDuration: 2

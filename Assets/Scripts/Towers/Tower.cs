@@ -12,6 +12,8 @@ public class Tower : MonoBehaviour
     Transform target;
     float nextFire, nextScan;
 
+    public TowerData Data => data;
+
     void Update()
     {
         if (Time.time >= nextScan) { nextScan = Time.time + 0.15f; target = Acquire(); }
