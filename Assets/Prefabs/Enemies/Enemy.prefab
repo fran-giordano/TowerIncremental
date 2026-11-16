@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5541611214311850365}
   - component: {fileID: 5639486495509779227}
   - component: {fileID: 5979789195046478684}
-  - component: {fileID: 7473923482539103208}
-  m_Layer: 0
+  - component: {fileID: -4497729032903604484}
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,8 +127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthTarget
   maxHealth: 100
-  healthFillImage: {fileID: 0}
---- !u!114 &7473923482539103208
+  destroyOnDeath: 1
+--- !u!114 &-4497729032903604484
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,16 +137,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2634312196695523981}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e3d25b59877bba4dbc48ed27efc9b5c, type: 3}
+  m_Script: {fileID: 11500000, guid: c4d4f2b2e10984d48bbb4ffe0f46afd7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PathFollower
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  speed: 3
-  arrivalThreshold: 0.5
-  rotationSpeed: 5
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
