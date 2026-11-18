@@ -1,38 +1,35 @@
+using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class HealthTarget : MonoBehaviour
 {
-    public float maxHealth = 100f;
-    private float currentHealth;
+    [SerializeField] float maxHealth = 50f;
+    [SerializeField] bool destroyOnDeath = true;
 
-    [Header("UI Reference")]
-    public Image healthFillImage;
+    public float Max => maxHealth;
+    public float Current { get; private set; }
+    public event Action<float, float> Changed;   // (actual, max) → barra de vida
+    public event Action Died;
 
-    void Start()
+    void Awake() => Current = maxHealth;
+
+    public void Init(float max)
     {
-        currentHealth = maxHealth;
-        UpdateHealthBar();
+        maxHealth = Current = max;
+        Changed?.Invoke(Current, maxHealth);
     }
 
-    public void TakeDamage(float damageAmount)
+    public void TakeDamage(float dmg)
     {
-        currentHealth -= damageAmount;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        UpdateHealthBar();
+        if (Current <= 0f) return;
 
-        if (currentHealth <= 0)
-        {
-            Debug.Log($"{gameObject.name} Destroyed!");
-            Destroy(gameObject); 
-        }
-    }
+        Current = Mathf.Max(0f, Current - dmg);
+        Changed?.Invoke(Current, maxHealth);
 
-    void UpdateHealthBar()
-    {
-        if (healthFillImage != null)
-        {
-            healthFillImage.fillAmount = currentHealth / maxHealth;
-        }
+        if (Current > 0f) return;
+
+        Died?.Invoke();
+        
+        if (destroyOnDeath) Destroy(gameObject);
     }
 }

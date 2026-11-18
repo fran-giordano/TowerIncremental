@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f8ac7ee238b89468064e70161b896b, type: 3}
   m_Name: Slow
   m_EditorClassIdentifier: 
-  towerName: 
+  towerName: Slow
   range: 5
   damage: 2
   fireInterval: 1
@@ -20,6 +20,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 6901598754011571859, guid: ff5f08d5305f16d4cb2861a6af01ee76,
     type: 3}
   targetMode: 0
+  cost: 60
   effect: 1
   effectValue: 0.5
   effectDuration: 2

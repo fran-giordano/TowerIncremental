@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f8ac7ee238b89468064e70161b896b, type: 3}
   m_Name: Sniper
   m_EditorClassIdentifier: 
-  towerName: 
+  towerName: Sniper
   range: 10
   damage: 40
   fireInterval: 2.5
@@ -20,6 +20,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 6901598754011571859, guid: 9e58c848c8bbcce469878faaeefa3ead,
     type: 3}
   targetMode: 1
+  cost: 90
   effect: 0
   effectValue: 0.5
   effectDuration: 2
