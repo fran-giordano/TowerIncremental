@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     void OnReachedBase(Enemy e)
     {
         if (BaseHealth <= 0) return;
+        GetComponent<AudioSource>().Play();
         BaseHealth = Mathf.Max(0, BaseHealth - e.Data.damageToBase);
         BaseHealthChanged?.Invoke(BaseHealth);
         if (BaseHealth == 0) BaseDestroyed?.Invoke();
