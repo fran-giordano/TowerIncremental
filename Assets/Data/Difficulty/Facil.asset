@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5988c94ceb2c494f83c7bffc3b57de19, type: 3}
+  m_Name: Facil
+  m_EditorClassIdentifier: Assembly-CSharp::DifficultyData
+  displayName: "F\xE1cil"
+  baseHealth: 20
+  startCoins: 200
+  timeLimit: 180
+  spawnInterval: 1.5
+  timeBetweenWaves: 8
+  waves:
+  - entries:
+    - type: {fileID: 11400000, guid: 26918c2f18bde4144b43f477e3c822c2, type: 2}
+      count: 5
+  - entries:
+    - type: {fileID: 11400000, guid: 26918c2f18bde4144b43f477e3c822c2, type: 2}
+      count: 4
+    - type: {fileID: 11400000, guid: c0975231e3f6ae14ba2f4743c507edf7, type: 2}
+      count: 2
