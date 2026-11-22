@@ -16,16 +16,25 @@ public class WaveSpawner : MonoBehaviour
     public int CurrentWave { get; private set; }
     public int TotalWaves => waves != null ? waves.Length : 0;
 
+    public bool CanCallNextWave { get; private set; }
+    public void CallNextWave()
+    {
+        if (CanCallNextWave) skipRequested = true;
+    }
+
     readonly HashSet<Enemy> alive = new HashSet<Enemy>();
     Wave[] waves;
     float spawnInterval, timeBetweenWaves;
+
+    [SerializeField] int earlyCallBonus = 10; // Si adelantas tenes recompensa
+    bool skipRequested;
 
     void OnEnable()  { Enemy.Killed += OnEnemyGone; Enemy.ReachedBase += OnEnemyGone; }
     void OnDisable() { Enemy.Killed -= OnEnemyGone; Enemy.ReachedBase -= OnEnemyGone; }
 
     IEnumerator Start()
     {
-        yield return null;                            // todos los Awake/Start ya corrieron (HUD suscrito)
+        yield return null;    // todos los Awake/Start ya corrieron (HUD suscrito)
 
         var diff = GameManager.I.Difficulty;
         waves = diff.waves;
@@ -44,10 +53,29 @@ public class WaveSpawner : MonoBehaviour
                     yield return new WaitForSeconds(spawnInterval);
                 }
 
-            yield return new WaitUntil(WaveCleared);
+            // Última oleada: hay que limpiarla para ganar, no se puede adelantar
+            if (w == waves.Length - 1)
+            {
+                yield return new WaitUntil(WaveCleared);
+                break;
+            }
 
-            if (w < waves.Length - 1)
-                yield return new WaitForSeconds(timeBetweenWaves);
+            // Ya salieron todos: desde acá se puede adelantar
+            skipRequested = false;
+            CanCallNextWave = true;
+
+            yield return new WaitUntil(() => WaveCleared() || skipRequested);
+
+            // Pausa entre oleadas, cortable con skip
+            float t = 0f;
+            while (t < timeBetweenWaves && !skipRequested)
+            {
+                t += Time.deltaTime;
+                yield return null;
+            }
+
+            CanCallNextWave = false;
+            if (skipRequested) GameManager.I.AddCoins(earlyCallBonus);
         }
 
         AllWavesCleared?.Invoke();

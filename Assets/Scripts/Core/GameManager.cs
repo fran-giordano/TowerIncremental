@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public int Coins { get; private set; }
     public int BaseHealth { get; private set; }
     public int Kills { get; private set; }
+    public bool Paused { get; private set; }
 
     public event Action<int> CoinsChanged;
     public event Action<int> BaseHealthChanged;
@@ -126,9 +127,16 @@ public class GameManager : MonoBehaviour
 
     public bool TrySpend(int amount)
     {
-        if (State != GameState.Playing || Coins < amount) return false;
+        if (State != GameState.Playing || Paused || Coins < amount) return false;
         Coins -= amount;
         CoinsChanged?.Invoke(Coins);
         return true;
+    }
+
+    public void SetPaused(bool paused)
+    {
+        if (State != GameState.Playing) return;
+        Paused = paused;
+        Time.timeScale = paused ? 0f : 1f;
     }
 }

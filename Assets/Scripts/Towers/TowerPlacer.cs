@@ -24,9 +24,11 @@ public class TowerPlacer : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.I.Paused || GameManager.I.State != GameState.Playing) return;
+        
         for (int i = 0; i < towerPrefabs.Length; i++)
             if (Input.GetKeyDown(KeyCode.Alpha1 + i)) Select(i);
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1)) Select(-1);
+        if (Input.GetMouseButtonDown(1)) Select(-1);
 
         bool overUI = EventSystem.current && EventSystem.current.IsPointerOverGameObject();
 
