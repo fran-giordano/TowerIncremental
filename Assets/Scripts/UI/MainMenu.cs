@@ -14,6 +14,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject mainPanel;
     [SerializeField] GameObject difficultyPanel;
     [SerializeField] GameObject rankingPanel;
+    [SerializeField] GameObject infoPanel;
     
     [SerializeField] TMP_Text rankingText;
 
@@ -30,6 +31,7 @@ public class MainMenu : MonoBehaviour
         mainPanel.SetActive(false);
         rankingPanel.SetActive(false);
         difficultyPanel.SetActive(true);
+        infoPanel.SetActive(false);
     }
 
     public void SelectEasy() => StartGame(easy);
@@ -41,6 +43,7 @@ public class MainMenu : MonoBehaviour
         mainPanel.SetActive(true);
         difficultyPanel.SetActive(false);
         rankingPanel.SetActive(false);
+        infoPanel.SetActive(false);
     }
 
     void StartGame(DifficultyData difficulty)
@@ -54,7 +57,7 @@ public class MainMenu : MonoBehaviour
         mainPanel.SetActive(false);
         difficultyPanel.SetActive(false);
         rankingPanel.SetActive(true);
-
+        infoPanel.SetActive(false);
         var top = ScoreBoard.GetTop();
         if(top.Count == 0)
         {
@@ -67,6 +70,15 @@ public class MainMenu : MonoBehaviour
                 sb.AppendLine($"{i + 1}. {top[i].score}  —  {top[i].difficulty}  —  {top[i].date}");
             rankingText.text = sb.ToString();       
         }
+    }
+
+    public void ShowInfo()
+    {
+        mainPanel.SetActive(false);
+        difficultyPanel.SetActive(false);
+        rankingPanel.SetActive(false);
+        infoPanel.SetActive(true);
+
     }
 
     public void QuitGame()
