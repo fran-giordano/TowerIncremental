@@ -18,7 +18,10 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
-        highscoreTXT.text = "Highscore: " + PlayerPrefs.GetInt("highscore", 0);
+        var top = ScoreBoard.GetTop();
+        highscoreTXT.text = top.Count > 0
+            ? $"Recorde: {top[0].score} ({top[0].difficulty})"
+            : "Recorde: —";
         ShowMain();
     }
 
