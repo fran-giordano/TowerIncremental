@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public float TimeLeft { get; private set; }
     public int Coins { get; private set; }
     public int BaseHealth { get; private set; }
+    public int Kills { get; private set; }
 
     public event Action<int> CoinsChanged;
     public event Action<int> BaseHealthChanged;
@@ -76,7 +77,10 @@ public class GameManager : MonoBehaviour
 
     void OnKilled(Enemy e)
     {
-        if (State == GameState.Playing) AddCoins(e.Data.reward);
+        if (State != GameState.Playing) return;
+
+        Kills++;
+        AddCoins(e.Data.reward);
     }
 
     void OnReachedBase(Enemy e)
@@ -103,6 +107,14 @@ public class GameManager : MonoBehaviour
     {
         State = result;
         Time.timeScale = 0f;                             // congela enemigos, torres y proyectiles
+        
+        int score = Kills * 10;
+        if (result == GameState.Won)
+            {
+                score += Mathf.CeilToInt(TimeLeft) * 10 + BaseHealth * 50;
+            }
+
+        ScoreBoard.Add(score, Difficulty.displayName);        
         GameEnded?.Invoke(result);
     }
 
