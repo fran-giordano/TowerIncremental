@@ -98,8 +98,10 @@ public class GameManager : MonoBehaviour
 
         if (BaseHealth == 0)
         {
-            BaseDestroyed?.Invoke();
             gifPlayer.PlayGif();
+
+            BaseDestroyed?.Invoke();
+            
             End(GameState.Lost);
         }
     }
@@ -112,7 +114,7 @@ public class GameManager : MonoBehaviour
     void End(GameState result)
     {
         State = result;
-        Time.timeScale = 0f;                             // congela enemigos, torres y proyectiles
+        Time.timeScale = 2f;                             // congela enemigos, torres y proyectiles
         
         int score = Kills * 10;
         if (result == GameState.Won)

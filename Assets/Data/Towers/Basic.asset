@@ -15,7 +15,7 @@ MonoBehaviour:
   towerName: Basic
   range: 5
   damage: 10
-  fireInterval: 0.6
+  fireInterval: 0.5
   projectileSpeed: 12
   projectilePrefab: {fileID: 6901598754011571859, guid: 8d5c953145bd1964b91ea5f2af1f9ca2,
     type: 3}

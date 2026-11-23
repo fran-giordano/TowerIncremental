@@ -56,8 +56,8 @@ Transform:
   m_GameObject: {fileID: 7614039994348553603}
   serializedVersion: 2
   m_LocalRotation: {x: -0.00000008146034, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3346326575532327147}
@@ -90,7 +90,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.7, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2231803254621098372}
@@ -112,17 +112,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 39857cfad1651644682ff5b772e6e697,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.25
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 39857cfad1651644682ff5b772e6e697,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.25
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 39857cfad1651644682ff5b772e6e697,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.25
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 39857cfad1651644682ff5b772e6e697,
         type: 3}
@@ -420,17 +420,17 @@ PrefabInstance:
     - target: {fileID: 6952611665789257693, guid: 719a7a88a40c0554286e23581d68e2d9,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6952611665789257693, guid: 719a7a88a40c0554286e23581d68e2d9,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6952611665789257693, guid: 719a7a88a40c0554286e23581d68e2d9,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6952611665789257693, guid: 719a7a88a40c0554286e23581d68e2d9,
         type: 3}

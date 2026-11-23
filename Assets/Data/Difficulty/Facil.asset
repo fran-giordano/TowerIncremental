@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DifficultyData
   displayName: "F\xE1cil"
   baseHealth: 10
-  startCoins: 200
-  timeLimit: 180
-  spawnInterval: 1.5
+  startCoins: 180
+  timeLimit: 130
+  spawnInterval: 1.4
   timeBetweenWaves: 8
   waves:
   - entries:
@@ -25,5 +25,12 @@ MonoBehaviour:
   - entries:
     - type: {fileID: 11400000, guid: 26918c2f18bde4144b43f477e3c822c2, type: 2}
       count: 4
+    - type: {fileID: 11400000, guid: c0975231e3f6ae14ba2f4743c507edf7, type: 2}
+      count: 2
+  - entries:
+    - type: {fileID: 11400000, guid: 26918c2f18bde4144b43f477e3c822c2, type: 2}
+      count: 4
+    - type: {fileID: 11400000, guid: 4e1d9ed991548144faf8bbed5323bb2a, type: 2}
+      count: 2
     - type: {fileID: 11400000, guid: c0975231e3f6ae14ba2f4743c507edf7, type: 2}
       count: 2

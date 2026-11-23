@@ -14,25 +14,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DifficultyData
   displayName: "Dif\xEDcil"
   baseHealth: 7
-  startCoins: 120
+  startCoins: 160
   timeLimit: 150
-  spawnInterval: 0.8
-  timeBetweenWaves: 5
+  spawnInterval: 0.9
+  timeBetweenWaves: 4
   waves:
   - entries:
     - type: {fileID: 11400000, guid: 26918c2f18bde4144b43f477e3c822c2, type: 2}
       count: 6
     - type: {fileID: 11400000, guid: c0975231e3f6ae14ba2f4743c507edf7, type: 2}
-      count: 2
+      count: 1
   - entries:
+    - type: {fileID: 11400000, guid: 26918c2f18bde4144b43f477e3c822c2, type: 2}
+      count: 2
     - type: {fileID: 11400000, guid: c0975231e3f6ae14ba2f4743c507edf7, type: 2}
-      count: 6
+      count: 3
     - type: {fileID: 11400000, guid: 4e1d9ed991548144faf8bbed5323bb2a, type: 2}
       count: 2
+    - type: {fileID: 11400000, guid: c0975231e3f6ae14ba2f4743c507edf7, type: 2}
+      count: 3
   - entries:
     - type: {fileID: 11400000, guid: 26918c2f18bde4144b43f477e3c822c2, type: 2}
       count: 6
     - type: {fileID: 11400000, guid: c0975231e3f6ae14ba2f4743c507edf7, type: 2}
       count: 4
     - type: {fileID: 11400000, guid: 4e1d9ed991548144faf8bbed5323bb2a, type: 2}
+      count: 3
+  - entries:
+    - type: {fileID: 11400000, guid: 26918c2f18bde4144b43f477e3c822c2, type: 2}
+      count: 4
+    - type: {fileID: 11400000, guid: 4e1d9ed991548144faf8bbed5323bb2a, type: 2}
+      count: 2
+    - type: {fileID: 11400000, guid: 26918c2f18bde4144b43f477e3c822c2, type: 2}
+      count: 3
+    - type: {fileID: 11400000, guid: 4e1d9ed991548144faf8bbed5323bb2a, type: 2}
+      count: 1
+  - entries:
+    - type: {fileID: 11400000, guid: 26918c2f18bde4144b43f477e3c822c2, type: 2}
+      count: 5
+    - type: {fileID: 11400000, guid: c0975231e3f6ae14ba2f4743c507edf7, type: 2}
+      count: 2
+    - type: {fileID: 11400000, guid: 4e1d9ed991548144faf8bbed5323bb2a, type: 2}
+      count: 1
+    - type: {fileID: 11400000, guid: 4e1d9ed991548144faf8bbed5323bb2a, type: 2}
+      count: 3
+    - type: {fileID: 11400000, guid: 26918c2f18bde4144b43f477e3c822c2, type: 2}
+      count: 3
+    - type: {fileID: 11400000, guid: c0975231e3f6ae14ba2f4743c507edf7, type: 2}
       count: 3

@@ -17,5 +17,6 @@ MonoBehaviour:
   maxHealth: 50
   damageToBase: 1
   reward: 10
-  scale: 0.7
+  scale: 0.6
   color: {r: 1, g: 1, b: 1, a: 1}
+  deathFX: {fileID: 5779228890198309283, guid: a9944c9fd7333cd4c8426556ea923fb2, type: 3}
