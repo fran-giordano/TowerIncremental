@@ -11,3 +11,5 @@
 *.sln
 *.user
 *.unitypackage
+*.unitypackage.meta
+Claude outputs/

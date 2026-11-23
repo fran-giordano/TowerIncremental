@@ -114,7 +114,7 @@ public class GameManager : MonoBehaviour
     void End(GameState result)
     {
         State = result;
-        Time.timeScale = 2f;                             // congela enemigos, torres y proyectiles
+        Time.timeScale = 0f;                             // congela enemigos, torres y proyectiles
         
         int score = Kills * 10;
         if (result == GameState.Won)
@@ -122,6 +122,7 @@ public class GameManager : MonoBehaviour
                 score += Mathf.CeilToInt(TimeLeft) * 10 + BaseHealth * 50;
             }
 
+        score = Mathf.RoundToInt(score * Difficulty.scoreMultiplier);
         Score = score;
         RankPosition = ScoreBoard.Add(score, Difficulty.displayName);   
           

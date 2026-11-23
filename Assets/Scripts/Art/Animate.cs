@@ -25,7 +25,7 @@ public class SimpleGifPlayer : MonoBehaviour
         for (int i = 0; i < frames.Length; i++)
         {
             targetImage.sprite = frames[i];
-            yield return new WaitForSeconds(delay);
+            yield return new WaitForSecondsRealtime(delay);
         }
     }
 }

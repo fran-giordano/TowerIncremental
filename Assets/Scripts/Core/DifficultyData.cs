@@ -21,6 +21,7 @@ public class DifficultyData : ScriptableObject
     public static DifficultyData Selected;
 
     public string displayName = "Fácil";
+    [Min(1f)] public float scoreMultiplier = 1f;   // Difícil vale más en el ranking
 
     [Header("Base e economia")]
     public int baseHealth = 20;

@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Dificil
   m_EditorClassIdentifier: Assembly-CSharp::DifficultyData
   displayName: "Dif\xEDcil"
+  scoreMultiplier: 2
   baseHealth: 7
   startCoins: 160
-  timeLimit: 150
+  timeLimit: 180
   spawnInterval: 0.9
   timeBetweenWaves: 4
   waves:

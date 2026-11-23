@@ -22,6 +22,7 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         ShowMain();                 // primero: el menú arranca bien aunque falle lo demás
     }
 
