@@ -1,0 +1,513 @@
+fileFormatVersion: 2
+guid: 061dc6a1793a4a347841f4b7c04a2af9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -517487953957689174
+    second: boom-explosion-ezgif.com-gif-to-sprite-converter(1)_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boom-explosion-ezgif.com-gif-to-sprite-converter(1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa8eec8927381d8f0800000000000000
+      internalID: -517487953957689174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom-explosion-ezgif.com-gif-to-sprite-converter(1)_1
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 600
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20418fea16de6bb49b1df3caf65854a3
+      internalID: 437240609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom-explosion-ezgif.com-gif-to-sprite-converter(1)_2
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 600
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cc7ba0c9a01f264fbbf2d10a30c7f8b
+      internalID: -702300779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom-explosion-ezgif.com-gif-to-sprite-converter(1)_3
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 600
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67773125dff9ff747abda2baebc9bf82
+      internalID: 786842046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom-explosion-ezgif.com-gif-to-sprite-converter(1)_4
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 600
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057366ff4d69c29429ff958ea940c88d
+      internalID: -1741966924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom-explosion-ezgif.com-gif-to-sprite-converter(1)_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f7ebafec1dbae4abbed7806a08e8f1
+      internalID: -208589795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom-explosion-ezgif.com-gif-to-sprite-converter(1)_6
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 400
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57af2d260834adc4a8313cac9ddbba85
+      internalID: 1073371794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom-explosion-ezgif.com-gif-to-sprite-converter(1)_7
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 400
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba0236134b07f746af1e8ba0f5f77d8
+      internalID: -1109356334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom-explosion-ezgif.com-gif-to-sprite-converter(1)_8
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 400
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc3cbf25dc38c640a32668f06117c43
+      internalID: -165903633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom-explosion-ezgif.com-gif-to-sprite-converter(1)_9
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 400
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c90bc3e28ea0704bb522e98c93ddc6d
+      internalID: -1255917667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom-explosion-ezgif.com-gif-to-sprite-converter(1)_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ceeff30a14bf34191f33e6365bd7e5
+      internalID: 134336293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom-explosion-ezgif.com-gif-to-sprite-converter(1)_11
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 200
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e3ea4abba3ab743a42e2d93bf565a6
+      internalID: 1702007151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom-explosion-ezgif.com-gif-to-sprite-converter(1)_12
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 200
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f304099cb1b4804bb71c1b10fbf719b
+      internalID: 360742355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom-explosion-ezgif.com-gif-to-sprite-converter(1)_13
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 200
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 858ab8a6c1cbb8247aecf9152569ba31
+      internalID: 324062405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom-explosion-ezgif.com-gif-to-sprite-converter(1)_14
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 200
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c35f59e74225e0b478e338fb61e865d2
+      internalID: 1901457365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom-explosion-ezgif.com-gif-to-sprite-converter(1)_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1237d2c631de25a459d65ac8b83067c5
+      internalID: 1753092124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom-explosion-ezgif.com-gif-to-sprite-converter(1)_16
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 871a94a86b5212046ae62e9314c75109
+      internalID: 580181745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 44104bdc0da6c1e42966ff8ab7b1ad96
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":140.0,"y":200.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      boom-explosion-ezgif.com-gif-to-sprite-converter(1)_0: -517487953957689174
+      boom-explosion-ezgif.com-gif-to-sprite-converter(1)_1: 437240609
+      boom-explosion-ezgif.com-gif-to-sprite-converter(1)_10: 134336293
+      boom-explosion-ezgif.com-gif-to-sprite-converter(1)_11: 1702007151
+      boom-explosion-ezgif.com-gif-to-sprite-converter(1)_12: 360742355
+      boom-explosion-ezgif.com-gif-to-sprite-converter(1)_13: 324062405
+      boom-explosion-ezgif.com-gif-to-sprite-converter(1)_14: 1901457365
+      boom-explosion-ezgif.com-gif-to-sprite-converter(1)_15: 1753092124
+      boom-explosion-ezgif.com-gif-to-sprite-converter(1)_16: 580181745
+      boom-explosion-ezgif.com-gif-to-sprite-converter(1)_2: -702300779
+      boom-explosion-ezgif.com-gif-to-sprite-converter(1)_3: 786842046
+      boom-explosion-ezgif.com-gif-to-sprite-converter(1)_4: -1741966924
+      boom-explosion-ezgif.com-gif-to-sprite-converter(1)_5: -208589795
+      boom-explosion-ezgif.com-gif-to-sprite-converter(1)_6: 1073371794
+      boom-explosion-ezgif.com-gif-to-sprite-converter(1)_7: -1109356334
+      boom-explosion-ezgif.com-gif-to-sprite-converter(1)_8: -165903633
+      boom-explosion-ezgif.com-gif-to-sprite-converter(1)_9: -1255917667
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

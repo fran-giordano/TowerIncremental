@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] DifficultyData defaultDifficulty;   // se usa si no se pasó por el menú
     [SerializeField] WaveSpawner spawner;                // si queda vacío, se busca en la escena
     [SerializeField] AudioSource baseHitSfx;             // si queda vacío, usa el AudioSource del objeto
+    [SerializeField] private SimpleGifPlayer gifPlayer; // Explosão caso perder...
 
     public DifficultyData Difficulty { get; private set; }
     public GameState State { get; private set; }
@@ -98,6 +99,7 @@ public class GameManager : MonoBehaviour
         if (BaseHealth == 0)
         {
             BaseDestroyed?.Invoke();
+            gifPlayer.PlayGif();
             End(GameState.Lost);
         }
     }
