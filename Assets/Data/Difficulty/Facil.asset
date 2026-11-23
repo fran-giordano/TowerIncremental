@@ -13,11 +13,7 @@ MonoBehaviour:
   m_Name: Facil
   m_EditorClassIdentifier: Assembly-CSharp::DifficultyData
   displayName: "F\xE1cil"
-<<<<<<< Updated upstream
-  baseHealth: 20
-=======
   baseHealth: 10
->>>>>>> Stashed changes
   startCoins: 200
   timeLimit: 180
   spawnInterval: 1.5

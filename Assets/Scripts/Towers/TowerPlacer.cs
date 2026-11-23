@@ -30,16 +30,12 @@ public class TowerPlacer : MonoBehaviour
 
     void Update()
     {
-<<<<<<< Updated upstream
-        if (GameManager.I.Paused || GameManager.I.State != GameState.Playing) return;
-=======
         
         if (GameManager.I.Paused || GameManager.I.State != GameState.Playing)
         {
             rangeRing.enabled = false;
             return;
         } 
->>>>>>> Stashed changes
         
         for (int i = 0; i < towerPrefabs.Length; i++)
             if (Input.GetKeyDown(KeyCode.Alpha1 + i)) Select(i);
