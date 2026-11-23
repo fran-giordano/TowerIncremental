@@ -21,4 +21,6 @@ public class TowerData : ScriptableObject
     public float effectValue = 0.5f;    //slow: x vel
     public float effectDuration = 2f;   // slow: seg
     public float areaRadius = 2f;       //Area: radio
+    public GameObject hitFX;
+    public Color fxColor = Color.yellow;
 }

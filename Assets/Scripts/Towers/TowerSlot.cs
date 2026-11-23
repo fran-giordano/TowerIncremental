@@ -7,6 +7,7 @@ public class TowerSlot : MonoBehaviour
     [SerializeField] Color freeColor = Color.green, busycolor = Color.red;
 
     public bool Occupied {get; private set; }
+    public Vector3 AnchorPosition => anchor ? anchor.position : transform.position;
     Color baseColor;
 
     void Awake()

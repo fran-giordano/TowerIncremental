@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Dificil
   m_EditorClassIdentifier: Assembly-CSharp::DifficultyData
   displayName: "Dif\xEDcil"
+<<<<<<< Updated upstream
   baseHealth: 10
+=======
+  baseHealth: 7
+>>>>>>> Stashed changes
   startCoins: 120
   timeLimit: 150
   spawnInterval: 0.8

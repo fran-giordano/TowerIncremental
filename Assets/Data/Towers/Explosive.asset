@@ -25,3 +25,5 @@ MonoBehaviour:
   effectValue: 0.5
   effectDuration: 2
   areaRadius: 2
+  hitFX: {fileID: 5779228890198309283, guid: a8143f10fe0e54c49813ff3211e143cc, type: 3}
+  fxColor: {r: 1, g: 0.5227729, b: 0.015686274, a: 1}

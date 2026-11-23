@@ -11,4 +11,5 @@ public class EnemyData : ScriptableObject
     public int reward = 5; //monedas
     public float scale = 1f;
     public Color color = Color.white;
+    public GameObject deathFX;
 }
