@@ -20,7 +20,7 @@ public class TowerSlot : MonoBehaviour
     {
         if (Occupied) return false;
         var pos = anchor ? anchor.position : transform.position;
-        Instantiate(prefab, pos, Quaternion.identity, transform);
+        Instantiate(prefab, pos, Quaternion.identity);
         Occupied = true;
         return true;
     }
