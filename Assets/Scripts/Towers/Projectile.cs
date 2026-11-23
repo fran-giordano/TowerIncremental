@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     Vector3 lastPos;
     TowerData data;
     LayerMask enemyMask;
+    [SerializeField] AudioSource bulletShootSfx;             // se vazio, usa o AudioSource do objeto
 
     const float MaxLifeTime = 4f;
     Vector3 origin;
@@ -26,6 +27,7 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         life += Time.deltaTime;
+        if (bulletShootSfx) bulletShootSfx.Play();
         float maxDist = data.range * 3f;
         if (life > MaxLifeTime || (transform.position - origin).sqrMagnitude > maxDist * maxDist) 
         {
