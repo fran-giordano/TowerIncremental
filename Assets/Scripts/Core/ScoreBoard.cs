@@ -15,7 +15,7 @@ public class ScoreEntry
 public static class ScoreBoard
 {
     const string Key = "ranking";
-    const int MaxEntries = 5;
+    const int MaxEntries = 10;
 
     [Serializable] class Wrapper 
     { 
@@ -32,7 +32,7 @@ public static class ScoreBoard
         return wrapper.entries;
     }
 
-    public static void Add(int score, string difficulty)
+    public static int Add(int score, string difficulty)
     {
         var entries = GetTop();
         var newEntry = new ScoreEntry
@@ -52,6 +52,8 @@ public static class ScoreBoard
         var json = JsonUtility.ToJson(new Wrapper { entries = entries });
         PlayerPrefs.SetString(Key, json);
         PlayerPrefs.Save();   // al final: escribe en disco lo que acabás de guardar
+
+        return entries.IndexOf(newEntry);
     }
 
 }

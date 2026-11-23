@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
     public event Action BaseDestroyed;
     public event Action<GameState> GameEnded;            // único aviso de fin: panel, ranking, etc.
 
+    public int Score {get; private set;}
+    public int RankPosition {get; private set; }
+
     void Awake()
     {
         if (I && I != this) { Destroy(gameObject); return; }
@@ -115,7 +118,9 @@ public class GameManager : MonoBehaviour
                 score += Mathf.CeilToInt(TimeLeft) * 10 + BaseHealth * 50;
             }
 
-        ScoreBoard.Add(score, Difficulty.displayName);        
+        Score = score;
+        RankPosition = ScoreBoard.Add(score, Difficulty.displayName);   
+          
         GameEnded?.Invoke(result);
     }
 

@@ -13,6 +13,7 @@ public class EndGamePanel : MonoBehaviour
     [SerializeField] Button restartButton;
     [SerializeField] Button menuButton;              // opcional, hasta que exista el menú
     [SerializeField] string menuScene = "MainMenu";
+    [SerializeField] TMP_Text rankingText;
 
     void Awake()
     {
@@ -38,6 +39,30 @@ public class EndGamePanel : MonoBehaviour
         {
             title.text = "Derrota";
             subtitle.text = gm.BaseHealth <= 0 ? "O castelo foi destruído" : "Tempo esgotado";
+        }
+
+        subtitle.text += $"\n\n<size=150%><b>Pontuação: {gm.Score}</b></size>";
+
+        if (rankingText)
+        {
+            var top = ScoreBoard.GetTop();
+            var sb = new System.Text.StringBuilder("<b>Ranking</b>\n");
+            const int Mostrar = 5;
+            for (int i = 0; i < Mathf.Min(Mostrar, top.Count); i++)
+            {
+                string linha = $"{i + 1}. {top[i].score}  ·  {top[i].difficulty}  ·  {top[i].date}";
+                sb.AppendLine(i == gm.RankPosition ? $"<color=#FFD54A><b>{linha}  (você)</b></color>" : linha);
+            }
+
+            if (gm.RankPosition >= Mostrar)   // quedó del 6.º al 10.º: igual se lo mostramos
+            {
+                var e = top[gm.RankPosition];
+                sb.AppendLine("...");
+                sb.AppendLine($"<color=#FFD54A><b>{gm.RankPosition + 1}. {e.score}  ·  {e.difficulty}  ·  {e.date}  (você)</b></color>");
+            }
+            else if (gm.RankPosition < 0) sb.AppendLine("\n(não entrou no top 10)");
+
+            rankingText.text = sb.ToString();   
         }
 
         panel.SetActive(true);
