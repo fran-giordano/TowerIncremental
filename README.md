@@ -6,8 +6,12 @@ Defenda o castelo contra ondas de tanques inimigos posicionando torres militares
 
 ## Download e vídeo
 **Executável (Windows)** 
+https://drive.google.com/file/d/1HpgQEIhXREX7ZOR0d-dZi9fy-gE5IOGz/view?usp=sharing
 
 **Vídeo demonstrativo**
+https://drive.google.com/file/d/1HaL5aeNBmT8Gmhhy1-oc1OpkOhd2zJy2/view?usp=sharing
+
+Aviso: Podem ocorrer problemas com o Windows Defender, você pode escolher ignorar e executar mesmo assim
 
 > Para jogar: baixe o `.zip`, extraia e execute `Tank Defense.exe`.
 
