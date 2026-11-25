@@ -1,0 +1,20 @@
+name: 💡 Idea
+description: Proponé algo para el juego. Se comenta y Francisco decide.
+labels: ["idea"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: ¿Cuál es la idea?
+      description: Contala como quieras. Podés sumar imágenes, links o bocetos.
+    validations:
+      required: true
+  - type: textarea
+    id: porque
+    attributes:
+      label: ¿Qué aporta al juego?
+      description: ¿Qué pilar de VISION.md refuerza?
+  - type: textarea
+    id: referencias
+    attributes:
+      label: Referencias (opcional)

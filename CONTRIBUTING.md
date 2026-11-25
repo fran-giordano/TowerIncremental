@@ -1,43 +1,88 @@
-# Cómo contribuir
+# Cómo trabajamos
 
-Este proyecto nació como trabajo práctico de CG&RV (UPF, 2026/2) y ahora sigue como proyecto abierto, **sin fechas ni presión**. Se suma cualquier cosa: ideas, código, arte, música, sonido, diseño de niveles.
+Somos pocos, sin fechas y cada uno avanza cuando puede. Estas reglas existen para que el otro entienda qué pasó sin tener que preguntar.
 
-## Dónde está el roadmap
-Todo vive en el tablero **GitHub Projects** del repo (pestaña *Projects*). Cada tarjeta es un *issue*.
-
-| Columna | Significa |
+## 1. Dónde vive cada cosa
+| Qué | Dónde |
 |---|---|
-| 💡 Ideas | Propuestas sin evaluar. Cualquiera puede agregar. |
-| 📋 Para hacer | Idea aceptada y con alcance claro. |
-| 🚧 En curso | Alguien la está haciendo (asignate el issue). |
-| ✅ Hecho | Mergeado en `main`. |
+| Charla rápida | WhatsApp / Discord. Si sale algo importante, se pasa a GitHub. |
+| Qué juego hacemos | [VISION.md](VISION.md) |
+| Ideas y tareas | Issues de GitHub |
+| En qué está cada uno | Tablero (pestaña *Projects*) |
+| Reglas de código | [docs/CONVENCIONES_CODIGO.md](docs/CONVENCIONES_CODIGO.md) |
 
-Los **hitos** (*milestones*) agrupan trabajo por objetivo, no por fecha.
+## 2. De idea a tarea
+```
+💡 Idea ──► se comenta ──► Francisco decide ──► 📋 Tarea ──► 🚧 Haciendo ──► ✅ Hecho
+                                  └─► se cierra (queda registrada como descartada)
+```
+1. **Idea:** cualquiera abre un issue con la plantilla *💡 Idea*. Puede ser de mecánica, arte, sonido, cualquier cosa.
+2. **Se comenta:** el otro opina en el issue (👍 / 👎 o un comentario).
+3. **Se decide:** Francisco tiene la última palabra.
+   - **Aprobada:** se crean una o más *📋 Tareas* que la referencian.
+   - **Descartada:** se cierra como *Not planned*. No se borra: así no se vuelve a discutir.
+4. Si la idea cambia la visión, se actualiza [VISION.md](VISION.md) en el mismo PR o en uno aparte.
 
-## Flujo
-1. **Tenés una idea:** abrí un issue con la plantilla *💡 Idea*. Va solo a la columna Ideas.
-2. **Querés hacer algo:** elegí un issue de *Para hacer*, asignátelo y movelo a *En curso*.
-3. **Rama:** `tipo/descripcion-corta`, por ejemplo `feat/torre-laser`, `art/nuevo-castillo`, `audio/musica-menu`, `fix/gif-derrota`.
-4. **Commits:** formato [Conventional Commits](https://www.conventionalcommits.org/): `feat:`, `fix:`, `art:`, `audio:`, `docs:`, `refactor:`.
-5. **Pull Request** a `main` con `Closes #N` en la descripción. El issue se cierra solo al mergear.
+### Regla para no frenarse
+Si algo **no cambia la visión** (un bug, un ajuste de balance, refactor, una mejora chica), **se hace directo**, sin abrir una idea. Igual va por PR.
 
-## Etiquetas
-- **Área:** `código`, `arte`, `audio`, `diseño de juego`, `UI/UX`, `docs`.
-- **Tipo:** `idea`, `bug`, `mejora`.
-- **Extras:** `para empezar` (tareas chicas e independientes), `necesita decisión`.
+## 3. Tomar una tarea
+1. Asignátela (*Assignees* → vos) y movela a **🚧 Haciendo**.
+2. Si vas a tocar una **escena** o un **prefab compartido**, aclaralo en el issue: Unity no mergea bien dos cambios en la misma escena.
+3. Si la abandonás, desasignate y dejá un comentario de dónde quedó.
 
-## Configurar Unity
-- **Versión:** Unity **6000.3.28f1** (URP). Usá exactamente esa versión desde Unity Hub.
-- **Archivos pesados:** evitá subir binarios de más de 50 MB. Si el repo empieza a pesar mucho, pasamos a Git LFS (está en el roadmap).
-- **Merge de escenas y prefabs:** agregá esto a tu `.gitconfig` para que Git use la herramienta de Unity:
-  ```ini
-  [merge "unityyamlmerge"]
-      name = Unity SmartMerge
-      driver = '<ruta-de-Unity>/Editor/Data/Tools/UnityYAMLMerge' merge -p %O %B %A %A
-  ```
-- **Evitá conflictos:** dos personas no deberían editar la misma escena o el mismo prefab a la vez. Avisá en el issue qué escena o prefab vas a tocar.
+## 4. Ramas
+`tipo/numero-descripcion-corta`, en minúsculas y con guiones:
+```
+feat/12-olas-infinitas
+fix/18-torre-no-dispara
+art/7-modelo-castillo
+docs/3-vision-tematica
+```
+Nunca se trabaja directo en `main`.
 
-## Assets de terceros
-- Antes de agregar un asset, verificá su licencia y sumalo a la tabla de **Créditos** del README.
-- Para lo nuevo, preferí licencias **CC0 o CC-BY** (por ejemplo Kenney.nl, OpenGameArt, Freesound).
-- No subas música ni sonidos con copyright.
+## 5. Commits
+Formato [Conventional Commits](https://www.conventionalcommits.org/es/), **en español y en imperativo**:
+```
+feat: agregar olas infinitas con escalado de vida
+fix: corregir torre que no detectaba enemigos lentos
+refactor: extraer cálculo de daño a DamageCalculator
+```
+| Tipo | Uso |
+|---|---|
+| `feat` | Funcionalidad nueva |
+| `fix` | Corrección de bug |
+| `refactor` | Cambio de código sin cambiar comportamiento |
+| `art` | Modelos, materiales, VFX, escenario |
+| `audio` | Música y sonidos |
+| `balance` | Solo cambios de valores (ScriptableObjects) |
+| `docs` | Documentación |
+| `chore` | Configuración, paquetes, limpieza |
+
+Un commit = un cambio lógico. Nada de "cambios varios".
+
+## 6. Pull Requests
+- Uno por tarea, chico (idealmente menos de unos 400 líneas de código).
+- En la descripción va `Closes #N`, para que el issue se cierre solo.
+- Completá el checklist de la plantilla.
+- **Revisión:** si el otro está disponible, revisa. Si en **48 h** nadie revisó y el PR no toca la visión, el autor puede mergear.
+- Se mergea con **Squash and merge** (un commit limpio por PR en `main`).
+
+## 7. Definición de "hecho"
+- [ ] Funciona en Play Mode sin errores en la consola.
+- [ ] Sigue las [convenciones de código](docs/CONVENCIONES_CODIGO.md).
+- [ ] Los valores de juego están en ScriptableObjects, no hardcodeados.
+- [ ] Si agrega un asset de terceros, figura en *Créditos* con su licencia.
+- [ ] Si cambia algo de la visión, VISION.md está actualizado.
+
+## 8. Etiquetas
+| Etiqueta | Significa |
+|---|---|
+| `idea` | Propuesta sin decidir |
+| `tarea` | Trabajo aprobado y concreto |
+| `bug` | Algo no funciona |
+
+## 9. Assets y licencias
+- Solo assets **CC0 o CC-BY** (Kenney.nl, Quaternius, OpenGameArt, Freesound) o propios.
+- Nada con copyright: ni música comercial, ni sonidos sacados de otros juegos.
+- Cada asset externo se anota en la sección *Créditos* de [docs/CREDITOS.md](docs/CREDITOS.md).

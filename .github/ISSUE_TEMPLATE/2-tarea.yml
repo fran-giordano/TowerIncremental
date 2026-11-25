@@ -1,0 +1,27 @@
+name: 📋 Tarea
+description: Trabajo aprobado y concreto, listo para que alguien lo tome.
+labels: ["tarea"]
+body:
+  - type: input
+    id: origen
+    attributes:
+      label: Idea de origen (opcional)
+      placeholder: "#12"
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Está terminado cuando…
+      value: "- [ ] \n- [ ] "
+    validations:
+      required: true
+  - type: textarea
+    id: notas
+    attributes:
+      label: Notas técnicas
+      description: Scripts, prefabs o escenas que toca.
