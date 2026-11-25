@@ -1,0 +1,27 @@
+name: 💡 Idea
+description: Proponé algo nuevo para el juego (mecánica, arte, música, nivel, lo que sea)
+labels: ["idea"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options: [Código / mecánica, Arte / modelos, Audio / música, Diseño de juego / niveles, UI / UX, Otro]
+    validations:
+      required: true
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: ¿Qué es la idea?
+      description: Contala como quieras. Podés pegar imágenes, links o referencias.
+    validations:
+      required: true
+  - type: textarea
+    id: porque
+    attributes:
+      label: ¿Por qué mejoraría el juego?
+  - type: textarea
+    id: referencias
+    attributes:
+      label: Referencias (opcional)
+      description: Otros juegos, videos, bocetos, audios.

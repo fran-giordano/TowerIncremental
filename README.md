@@ -15,6 +15,12 @@ Aviso: Podem ocorrer problemas com o Windows Defender, você pode escolher ignor
 
 > Para jogar: baixe o `.zip`, extraia e execute `Tank Defense.exe`.
 
+## Roadmap e contribuição
+O projeto continua aberto, sem prazos. Ideias, código, arte e música são bem-vindos.
+- **Roadmap:** aba *Projects* deste repositório (quadro Ideas → Para hacer → En curso → Hecho).
+- **Propor algo:** abra uma *issue* com o modelo 💡 Idea.
+- **Como contribuir:** ver [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Equipe
 - Luiza Strehl — [@llstrehl](https://github.com/llstrehl)
 - Francisco Giordano — [@fran-giordano](https://github.com/fran-giordano)

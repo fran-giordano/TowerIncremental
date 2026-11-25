@@ -1,0 +1,18 @@
+name: 📋 Tarea
+description: Trabajo concreto y con alcance claro, listo para que alguien lo tome
+body:
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Está terminado cuando…
+      placeholder: "- [ ] ...\n- [ ] ..."
+  - type: textarea
+    id: notas
+    attributes:
+      label: Notas técnicas (scripts, prefabs o escenas que toca)
