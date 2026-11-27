@@ -14,21 +14,24 @@ Estas reglas valen igual para código escrito a mano o con IA. Si algo no está 
 Assets/
 ├─ _Project/                 ← todo lo nuestro
 │  ├─ Scripts/
-│  │  ├─ Core/               GameManager, estados, eventos, guardado
-│  │  ├─ Combat/             Torres, proyectiles, daño
+│  │  ├─ Core/               GameManager, estados, eventos, guardado, FX
+│  │  ├─ Towers/             Torres, proyectiles, daño, colocación
 │  │  ├─ Enemies/            Enemigos, oleadas, caminos
 │  │  ├─ Meta/               Taller, gemas, progreso permanente
 │  │  ├─ UI/
+│  │  ├─ Art/                Animaciones y efectos visuales por código
 │  │  └─ Utils/              Pools, formateo de números, extensiones
 │  ├─ Data/                  ScriptableObjects (.asset) por tipo
 │  ├─ Prefabs/
 │  ├─ Scenes/
-│  ├─ Art/                   Modelos, materiales, texturas, VFX
-│  └─ Audio/
-└─ ThirdParty/               ← assets externos, sin modificar
+│  └─ Art/                   Modelos, materiales, texturas, audio, VFX
+├─ ThirdParty/               ← assets externos, sin modificar
+├─ Settings/                 ← ajustes de URP (no mover)
+└─ TextMesh Pro/             ← lo maneja Unity (no mover)
 ```
 - No se edita nada dentro de `ThirdParty/`. Para cambiar un asset externo, se duplica en `_Project/`.
-- El código del TP que todavía no se migró queda en `Assets/Scripts/` hasta que se reubique.
+- Las carpetas `Meta/` y `Utils/` se crean cuando haga falta.
+- Namespace = `TowerIncremental.` + carpeta de primer nivel dentro de `Scripts/` (ej.: `TowerIncremental.Towers`).
 
 ## 3. Nombres (C#)
 | Elemento | Estilo | Ejemplo |
@@ -42,7 +45,7 @@ Assets/
 | Booleanos | prefijo `is`/`has`/`can` | `isAlive`, `canUpgrade` |
 
 - Un archivo por clase, con el mismo nombre que la clase.
-- Namespace por carpeta: `TowerIncremental.Combat`, `TowerIncremental.Meta`…
+- Namespace por carpeta: `TowerIncremental.Towers`, `TowerIncremental.Meta`…
 - Modificador de acceso explícito solo cuando no es `private` (el `private` se omite).
 
 ## 4. Reglas de Unity
