@@ -25,7 +25,7 @@ namespace TowerIncremental.UI
 
         void Start()
         {
-            Time.timeScale = 1f;
+            GameSpeed.Reset();
             ShowMain();                 // primero: el menú arranca bien aunque falle lo demás
         }
 

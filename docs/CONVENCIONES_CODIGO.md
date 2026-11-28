@@ -57,8 +57,9 @@ Assets/
 6. **Pooling obligatorio** para lo que se crea muchas veces (enemigos, proyectiles, VFX, números de daño). Se usa `UnityEngine.Pool.ObjectPool<T>`.
 7. **Números grandes:** los valores que escalan sin límite (oro, gemas, vida y daño en olas altas) usan `double`. En pantalla siempre se muestran con el formateador común (`1.2K`, `3.4M`…).
 8. **Guardado:** un único `SaveSystem` que serializa a JSON en `Application.persistentDataPath`. Ningún otro script escribe archivos ni `PlayerPrefs`.
-9. **Escenas:** una persona por escena a la vez (se avisa en el issue). Siempre que se pueda, el trabajo se hace en prefabs, no directo en la escena.
-10. **Archivos `.meta`:** se commitean siempre junto a su archivo y no se editan a mano.
+9. **Tiempo:** solo `GameSpeed` escribe `Time.timeScale`. Para pausar o congelar se usa `GameSpeed.SetFrozen`, y para cambiar la velocidad, `GameSpeed.SetSpeed`.
+10. **Escenas:** una persona por escena a la vez (se avisa en el issue). Siempre que se pueda, el trabajo se hace en prefabs, no directo en la escena.
+11. **Archivos `.meta`:** se commitean siempre junto a su archivo y no se editan a mano.
 
 ## 5. Estilo
 - Indentación de 4 espacios y llaves en línea nueva (estilo Allman), como define `.editorconfig`.

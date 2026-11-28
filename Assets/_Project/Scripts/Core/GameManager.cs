@@ -53,7 +53,7 @@ namespace TowerIncremental.Core
             BaseHealth = Difficulty.baseHealth;
             TimeLeft = Difficulty.timeLimit;
             State = GameState.Playing;
-            Time.timeScale = 1f;                             // es global y sobrevive entre escenas
+            GameSpeed.Reset();                               // cada partida arranca en x1
         }
 
         void OnEnable()
@@ -118,7 +118,7 @@ namespace TowerIncremental.Core
         void End(GameState result)
         {
             State = result;
-            Time.timeScale = 0f;                             // congela enemigos, torres y proyectiles
+            GameSpeed.SetFrozen(true);                       // congela enemigos, torres y proyectiles
 
             int score = Kills * 10;
             if (result == GameState.Won)
@@ -151,7 +151,7 @@ namespace TowerIncremental.Core
         {
             if (State != GameState.Playing) return;
             Paused = paused;
-            Time.timeScale = paused ? 0f : 1f;
+            GameSpeed.SetFrozen(paused);                     // al despausar vuelve a la velocidad elegida
         }
     }
 }
