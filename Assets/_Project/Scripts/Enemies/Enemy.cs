@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using TowerIncremental.Core;
 using TowerIncremental.Towers;
+using TowerIncremental.Utils;
 
 namespace TowerIncremental.Enemies
 {
@@ -28,10 +29,14 @@ namespace TowerIncremental.Enemies
         float slowFactor = 1f, slowUntil;
 
         bool reachedBase;
+        Vector3 baseScale;
 
         void Awake()
         {
             hp = GetComponent<HealthTarget>();
+            baseScale = transform.localScale;
+            block = new MaterialPropertyBlock();
+            renderers = GetComponentsInChildren<Renderer>();
             hp.Died += () => 
             {
                 FX.Spawn(Data.deathFX, transform.position, Data.color);
@@ -52,12 +57,15 @@ namespace TowerIncremental.Enemies
         {
             Data = d; pts = path;
             hp.Init(d.maxHealth);
-            transform.localScale *= d.scale;
+            transform.localScale = baseScale * d.scale;   // desde la escala original: el objeto puede venir reciclado
             transform.position = pts[0].position;
             idx = 1;
 
-            block = new MaterialPropertyBlock();
-            renderers = GetComponentsInChildren<Renderer>();
+            // Estado de un uso anterior (pooling)
+            Progress = 0f;
+            reachedBase = false;
+            slowFactor = 1f; slowUntil = 0f; flashUntil = 0f;
+
             SetColor(d.color);
         }
 
@@ -92,7 +100,7 @@ namespace TowerIncremental.Enemies
             if (reachedBase) return;   // que no cuente dos veces
             reachedBase = true;
             ReachedBase?.Invoke(this);
-            Destroy(gameObject);
+            PrefabPool.Release(gameObject);
         }
 
         void UpdateColor()

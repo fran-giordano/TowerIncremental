@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using TowerIncremental.Utils;
 
 namespace TowerIncremental.Enemies
 {
@@ -32,7 +33,7 @@ namespace TowerIncremental.Enemies
 
             Died?.Invoke();
 
-            if (destroyOnDeath) Destroy(gameObject);
+            if (destroyOnDeath) PrefabPool.Release(gameObject);
         }
     }
 }
