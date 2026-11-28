@@ -1,4 +1,5 @@
 using UnityEngine;
+using TowerIncremental.Utils;
 
 namespace TowerIncremental.Towers
 {
@@ -19,6 +20,7 @@ namespace TowerIncremental.Towers
         void Update()
         {
             if (Time.time >= nextScan) { nextScan = Time.time + 0.15f; target = Acquire(); }
+            if (target && !target.gameObject.activeInHierarchy) target = null;   // enemigo devuelto al pool
             if (!target) return;
 
             var dir = target.position - transform.position; dir.y = 0;
@@ -51,7 +53,7 @@ namespace TowerIncremental.Towers
 
         void Fire()
         {
-            var p = Instantiate(data.projectilePrefab, muzzle.position, muzzle.rotation);
+            var p = PrefabPool.Spawn(data.projectilePrefab, muzzle.position, muzzle.rotation);
             p.Init(target, data, enemyMask);
         }
 

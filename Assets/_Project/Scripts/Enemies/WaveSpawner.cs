@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TowerIncremental.Core;
+using TowerIncremental.Utils;
 
 namespace TowerIncremental.Enemies
 {
@@ -86,7 +87,7 @@ namespace TowerIncremental.Enemies
 
         void Spawn(EnemyData type)
         {
-            var enemy = Instantiate(prefab);
+            var enemy = PrefabPool.Spawn(prefab, path.Points[0].position, Quaternion.identity);
             enemy.Init(type, path.Points);
             alive.Add(enemy);
         }

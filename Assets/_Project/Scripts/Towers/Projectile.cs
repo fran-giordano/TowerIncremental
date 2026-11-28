@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TowerIncremental.Core;
 using TowerIncremental.Enemies;
+using TowerIncremental.Utils;
 
 namespace TowerIncremental.Towers
 {
@@ -26,6 +27,8 @@ namespace TowerIncremental.Towers
             target = t; data = d; enemyMask = mask;
             lastPos = t.position;
             origin = transform.position;
+            life = 0f;          // estado de un uso anterior (pooling)
+            consumed = false;
         }
 
         void Update()
@@ -35,17 +38,19 @@ namespace TowerIncremental.Towers
             float maxDist = data.range * 3f;
             if (life > MaxLifeTime || (transform.position - origin).sqrMagnitude > maxDist * maxDist) 
             {
-                Destroy(gameObject);
+                PrefabPool.Release(gameObject);
                 return;
             }
 
+            // Un enemigo devuelto al pool queda inactivo (antes se destruía): se suelta el objetivo
+            if (target && !target.gameObject.activeInHierarchy) target = null;
             if (target) lastPos = target.position;
             transform.position = Vector3.MoveTowards(transform.position, lastPos, data.projectileSpeed * Time.deltaTime);
             var d = lastPos - transform.position;
             if (d.sqrMagnitude > 0.0001f) transform.rotation = Quaternion.LookRotation(d);
             else {
                 if (data.effect == EffectType.Area) ExplodeAt(transform.position);
-                Destroy(gameObject);
+                PrefabPool.Release(gameObject);
             }        
         }
 
@@ -66,7 +71,7 @@ namespace TowerIncremental.Towers
                 if (data.effect == EffectType.Slow)
                     hp.GetComponentInParent<ISlowable>()?.ApplySlow(data.effectValue, data.effectDuration);
             }
-            Destroy(gameObject);
+            PrefabPool.Release(gameObject);
         }
 
         void ExplodeAt(Vector3 pos)
